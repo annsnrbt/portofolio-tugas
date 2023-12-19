@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/46db730133.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="sticky-top mynavbar">
+                <img src="kucing.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times"></i>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Annisa Nur Baiti</span></h1>
+            </div>
+        </div>
+    </div>
+    <!-----------about--------->    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hallo, Nama saya Annisa Nur Baiti, Saya lahir di karawang pada tanggal 01 oktober 2005, Saya seorang anak tunggal, 
+                        Saat ini saya seorang mahasiswa yang sedang berkuliah di Universitas Horizon Indonesia dengan jurusan Sistem Informasi dan Saya adalah 
+                        Fresh Graduate saat ini Saya sedang aktif mencari pekerjaan.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Tempat, Tanggal Lahir</p>
+                        <p class="tab-links" onclick="opentab('education')">Pendidikan</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Tempat</span><br>Karawang</li>     
+                            <li><span>Tanggal Lahir</span><br>01 Oktober 2005</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - Sekarang</span><br>Universitas Horizon Indonesia</li>     
+                            <li><span>2020 - 2023</span><br>SMA Negeri 6 Karawang</li>
+                            <li><span>2017 - 2020</span><br>SMP Negeri 8 Karawang</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------------services--------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Web design adalah istilah mengenai desaign visual yang diterapkan kepada media digital yaitu website, design yang ditunjukan untuk pengembangan dan styling informasi di internet untuk menyediakan fitur konsumen high-end dan memberikan kualitas estetika.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>UI/UX Design</h2>
+                <p>Web design adalah istilah mengenai desaign visual yang diterapkan kepada media digital yaitu website, design yang ditunjukan untuk pengembangan dan styling informasi di internet untuk menyediakan fitur konsumen high-end dan memberikan kualitas estetika.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>APP Design</h2>
+                <p>Web design adalah istilah mengenai desaign visual yang diterapkan kepada media digital yaitu website, design yang ditunjukan untuk pengembangan dan styling informasi di internet untuk menyediakan fitur konsumen high-end dan memberikan kualitas estetika.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ---------------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> annisanurbaiti621@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 08991958536</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/annsnrbt_/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Annisa NB. Made <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>        
+    </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }    
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }       
+    </script>   
+</body>
+</html>
